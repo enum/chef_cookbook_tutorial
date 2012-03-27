@@ -6,3 +6,8 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+
+class Chef::Recipe
+    include MyExampleLibrary
+end
+my_function()
