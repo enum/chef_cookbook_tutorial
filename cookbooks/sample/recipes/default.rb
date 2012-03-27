@@ -9,6 +9,7 @@
 
 ::Chef::Recipe.send(:include, MyExampleLibrary)
 my_function()
+print_node()
 
 directory node[:mycompany_customers][:bob][:webdir] do
     owner "vagrant"
