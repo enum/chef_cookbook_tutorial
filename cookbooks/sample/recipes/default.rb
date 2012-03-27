@@ -9,3 +9,10 @@
 
 ::Chef::Recipe.send(:include, MyExampleLibrary)
 my_function()
+
+directory node[:mycompany_customers][:bob][:webdir] do
+    owner "vagrant"
+    group "vagrant"
+    recursive true
+    action :create
+end
