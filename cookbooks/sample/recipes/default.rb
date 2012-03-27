@@ -7,7 +7,5 @@
 # All rights reserved - Do Not Redistribute
 #
 
-class Chef::Recipe
-    include MyExampleLibrary
-end
+::Chef::Recipe.send(:include, MyExampleLibrary)
 my_function()
