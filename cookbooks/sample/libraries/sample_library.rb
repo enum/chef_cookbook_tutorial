@@ -11,4 +11,10 @@ module MyExampleLibrary
     def customer(name)
         node[:mycompany_customers][name]
     end
+
+    def all_customers(&block)
+        node[:mycompany_customers].each do |name, info|
+            block.call(name, info)
+        end
+    end
 end
