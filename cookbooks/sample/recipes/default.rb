@@ -11,9 +11,12 @@
 my_function()
 print_node()
 
-directory customer(:bob)[:webdir] do
-    owner "vagrant"
-    group "vagrant"
-    recursive true
-    action :create
+all_customers do |name, info|
+    directory info[:webdir] do
+        owner "vagrant"
+        group "vagrant"
+        recursive true
+        action :create
+    end
 end
+
