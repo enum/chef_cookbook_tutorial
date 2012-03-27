@@ -7,4 +7,8 @@ module MyExampleLibrary
     def print_node()
         Chef::Log.info node[:mycompany_customers]
     end
+
+    def customer(name)
+        node[:mycompany_customers][name]
+    end
 end
