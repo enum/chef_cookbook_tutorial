@@ -11,7 +11,7 @@
 my_function()
 print_node()
 
-directory node[:mycompany_customers][:bob][:webdir] do
+directory customer(:bob)[:webdir] do
     owner "vagrant"
     group "vagrant"
     recursive true
