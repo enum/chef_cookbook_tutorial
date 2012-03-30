@@ -4,8 +4,11 @@ module MyExampleLibrary
         Chef::Log.info 'my function!'
     end
 
-    def print_node()
-        Chef::Log.info node[:mycompany_customers]
+    def print_node(mynode)
+        mynode.each do |name, info|
+            Chef::Log.info "name:#{name}"
+            Chef::Log.info "info:#{info}"
+        end
     end
 
     def customer(name)
