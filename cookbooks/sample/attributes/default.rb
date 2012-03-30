@@ -23,3 +23,8 @@ if attribute?(:pattern1)
     Chef::Log.info "exists!"
 end
 
+include_attribute "sample2"
+
+if attribute?("sample2attribute")
+    Chef::Log.info "#{:sample2attribute}"
+end
