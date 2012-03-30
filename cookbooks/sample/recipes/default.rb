@@ -9,6 +9,8 @@
 
 ::Chef::Recipe.send(:include, MyExampleLibrary)
 my_function()
+
+node.default[:myattribute][:myvalue] = "in ../cookbook/sample/recipe/default.rb"
 print_node(node[:myattribute])
 
 all_customers do |name, info|
