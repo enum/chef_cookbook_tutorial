@@ -66,6 +66,7 @@ Vagrant::Config.run do |config|
   config.vm.provision :chef_solo do |chef|
       chef.cookbooks_path = "cookbooks"
       chef.add_recipe "sample"
+      chef.add_recipe "sample2"
 
       chef.roles_path = "roles"
       chef.add_role "default_role"
