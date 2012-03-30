@@ -8,4 +8,4 @@ mycompany_customers({
         :webdir => "/home/vagrant/tom/web"
     }
 })
-default["myattribute"]["myvalue"] = "myattribute.myvalue"
+default["myattribute"]["myvalue"] = "in ./attributes/default.rb"
