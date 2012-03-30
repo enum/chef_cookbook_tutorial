@@ -9,7 +9,7 @@
 
 ::Chef::Recipe.send(:include, MyExampleLibrary)
 my_function()
-print_node()
+print_node(node[:myattribute])
 
 all_customers do |name, info|
     directory info[:webdir] do
