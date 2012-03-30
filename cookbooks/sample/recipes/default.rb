@@ -13,6 +13,10 @@ my_function()
 node.default[:myattribute][:myvalue] = "in ../cookbook/sample/recipe/default.rb"
 print_node(node[:myattribute])
 
+if node.attribute?(:myattribute)
+    Chef::Log.info ":myattribute is exists!"
+end
+
 all_customers do |name, info|
     directory info[:webdir] do
         owner "vagrant"
